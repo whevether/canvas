@@ -1,3 +1,4 @@
+import '../core';
 import { noise } from './noise';
 import './index.less';
 let cvs = document.querySelector('canvas');

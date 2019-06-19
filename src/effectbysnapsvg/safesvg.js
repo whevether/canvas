@@ -1,8 +1,7 @@
-const Snap = require(`imports-loader?this=>window,fix=>module.exports=0!snapsvg/dist/snap.svg.js`);
-
+import './snap.svg-cjs';
 require('./index.less');
-
-var s = Snap(1000, 1000);
+const Snap = window.Snap;
+var s = Snap('100%', '100%');
 
 var safeSvg = {};
 
@@ -288,7 +287,7 @@ elems.forEach(function(elem) {
     group.append(elem);
 });
 
-safeSvgStart = function() {
+const safeSvgStart = function() {
     (function play(elem) {
         if (elem.sdata && elem.sdata.animate) {
             elem.sdata.animate.call(elem);

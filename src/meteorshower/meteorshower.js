@@ -1,4 +1,5 @@
 // 坐标
+import '../core';
 class Crood {
     constructor(x=0, y=0) {
         this.x = x;

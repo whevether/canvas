@@ -1,3 +1,4 @@
+import '../core';
 import {Vector2 as Vec2} from './vec2.js';
 import {TIME, Time} from './time.js';
 import './reset.less';

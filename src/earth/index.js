@@ -1,3 +1,4 @@
+import '../core';
 import './index.less';
 import {Time, TIME, TWEEN} from './time.js';
 import THREE from 'three.js';

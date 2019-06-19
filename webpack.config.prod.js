@@ -3,7 +3,6 @@ const glob = require('glob');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin"); //打包压缩css
 const HtmlWebpackPlugin = require('html-webpack-plugin'); //生成html并注入js css
 const CopyWebpackPlugin = require('copy-webpack-plugin'); //拷贝资源文件
-const WebpackMd5Hash = require('webpack-md5-hash'); //hash文件名
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const path = require('path');
@@ -114,7 +113,6 @@ const config = {
     },
     plugins: [
         // 插件
-        new WebpackMd5Hash(),
         new webpack.DefinePlugin(GLOBALS),
         new MiniCssExtractPlugin({
             filename: "styles/[name].css?v=[chunkhash]",
@@ -510,14 +508,7 @@ const config = {
                         loader: 'postcss-loader',
                         options: {
                             plugins: () => [
-                                require('autoprefixer')({
-                                    browsers: [
-                                        "> 1%",
-                                        "ie >= 9",
-                                        "last 4 versions",
-                                        "Firefox ESR",
-                                    ]
-                                }),
+                                require('autoprefixer'),
                                 require('postcss-pxtorem')({
                                     rootValue: 16,
                                     unitPrecision: 5,

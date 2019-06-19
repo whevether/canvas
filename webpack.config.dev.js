@@ -410,14 +410,7 @@ const config = {
             loader: 'postcss-loader',
             options: {
               plugins: () => [
-                require('autoprefixer')({
-                  browsers: [
-                    "> 1%",
-                    "ie >= 9",
-                    "last 4 versions",
-                    "Firefox ESR",
-                  ]
-                }),
+                require('autoprefixer'),
                 require('postcss-pxtorem')({
                   rootValue: 16,
                   unitPrecision: 5,

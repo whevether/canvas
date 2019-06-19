@@ -1,10 +1,8 @@
-const Snap = require(`imports-loader?this=>window,fix=>module.exports=0!snapsvg/dist/snap.svg.js`);
-
+// const Snap = require(`imports-loader?this=>window,fix=>module.exports=0!snapsvg/dist/snap.svg.js`);
+import '../core';
+import './snap.svg-cjs';
 import './index.less';
-
-console.log(Snap);
-
-
+const Snap = window.Snap;
 var animate = {
     'stroke-dasharray': function(options) {
         var that = this;
@@ -48,7 +46,7 @@ var animate = {
 
 
 
-var s = Snap(1000, 1000);
+var s = Snap('100%', '100%');
 
 var  sElems = {
 

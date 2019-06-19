@@ -13,7 +13,6 @@
  * attribution is appreciated.
  *
  */
-
 (function(global){
   var module = global.noise = {};
 

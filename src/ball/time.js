@@ -1,3 +1,4 @@
+import '../core';
 import TWEEN from 'tween.js';
 
 /* 时间 */

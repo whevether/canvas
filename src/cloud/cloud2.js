@@ -1,3 +1,4 @@
+import '../core';
 import {easing} from './easing';
 
 const cvs = document.querySelector('canvas');

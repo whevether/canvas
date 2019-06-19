@@ -1,4 +1,4 @@
-
+import '../core';
 import {noise} from './noise';
 import {Vector2} from './vec2'; 
 class Particle {

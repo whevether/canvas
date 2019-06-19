@@ -1,3 +1,4 @@
+import '../core';
 import {easing} from './easing';
 import THREE from 'three.js';
 let renderer;

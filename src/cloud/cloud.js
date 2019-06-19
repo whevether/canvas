@@ -1,3 +1,4 @@
+import '../core';
 import {easing} from './easing';
 import {Bezier} from './bezier';
 const cvs = document.querySelector('canvas');
